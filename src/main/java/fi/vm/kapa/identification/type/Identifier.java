@@ -31,7 +31,8 @@ public class Identifier {
         SATU,
         KID,
         EPPN,
-        UID
+        UID,
+        EIDAS_ID
     }
 }
 

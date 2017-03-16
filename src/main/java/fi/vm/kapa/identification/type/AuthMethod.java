@@ -30,6 +30,7 @@ public enum AuthMethod {
     KATSOOTP ("urn:oid:1.2.246.517.3002.110.5"),
     KATSOPWD ("urn:oid:1.2.246.517.3002.110.6"),
     MPASS1 ("urn:oid:1.2.246.517.3002.110.11"),
+    EIDAS1 ("urn:oid:1.2.246.517.3002.110.998"),
     TESTI ("urn:oid:1.2.246.517.3002.110.999");
 
     private final String oidValue;

@@ -87,7 +87,7 @@ public class PhaseIdServiceTest {
     }
 
     @Test
-    public void verifyReturnsTrueIfCalledTwoTimeIntervalsBeforeCreated() throws Exception {
+    public void verifyReturnsFalseIfCalledTwoTimeIntervalsBeforeCreated() throws Exception {
         int timeInterval = 10;
         PhaseIdService phaseIdService = getHmacPhaseIdServiceWithInteval(timeInterval);
 

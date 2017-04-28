@@ -25,6 +25,7 @@ package fi.vm.kapa.identification.service;
 import fi.vm.kapa.identification.type.Identifier;
 import fi.vm.kapa.identification.vtj.model.Person;
 
+@FunctionalInterface
 public interface PersonService {
     Person getPerson(String identifier, Identifier.Types identifierType);
 }

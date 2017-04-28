@@ -34,15 +34,15 @@ public class DummyPersonService implements PersonService {
 
     public static final String VTJ_EI_LOYDY_ETUNIMET = "vtj.ei.loydy.etunimet";
     public static final String INFO_SEPARATOR = "|";
-    public final String DEFAULT_HETU;
-    public String additionalStateInfo = null;
+    public final String defaultHetu;
+    private String additionalStateInfo = null;
 
     private DummyPersonService() {
-        this.DEFAULT_HETU = "010191-9696";
+        this.defaultHetu = "010191-9696";
     }
 
     public DummyPersonService(String defaultHetu) {
-        this.DEFAULT_HETU = defaultHetu;
+        this.defaultHetu = defaultHetu;
     }
 
     public void setAdditionalStateInfo(String additionalStateInfo) {
@@ -57,6 +57,7 @@ public class DummyPersonService implements PersonService {
         return firstNamesContent;
     }
 
+    @Override
     public Person getPerson(String identifier, Identifier.Types identifierType) {
         Person person = new Person();
         if (identifierType == HETU) {
@@ -66,7 +67,7 @@ public class DummyPersonService implements PersonService {
         else if (identifierType == SATU) {
             person.setSatu(identifier);
             person.setSatuValid(true);
-            String hetu = DEFAULT_HETU;
+            String hetu = defaultHetu;
             person.setHetu(hetu);
             person.setHetuValid(true);
         }

@@ -109,7 +109,7 @@ public class PhaseIdService {
      * @param stepCounter Step counter of the current step, this must be defined in the calling service
      * @return Boolean value if the verification succeeded or not
      */
-    public synchronized boolean verifyPhaseId(String phaseId, String tokenId, String stepCounter) {
+    public boolean verifyPhaseId(String phaseId, String tokenId, String stepCounter) {
         long sysTime = clock.millis();
         int time = (int)(sysTime / (timeInterval * 1000));
         /* This allows 3 x time interval for counting the HMAC checksum and if anyone of them succeeds,
@@ -122,7 +122,7 @@ public class PhaseIdService {
                 generateHmacString(tokenId, stepCounter, time + 1).equals(phaseId));
     }
 
-    private String generateHmacString(String tokenId, String stepCounter, int time) {
+    private synchronized String generateHmacString(String tokenId, String stepCounter, int time) {
         return String.valueOf(Hex.encode(hmacCalc.doFinal(("tid=" + tokenId + ";pid=" + stepCounter + ";time=" + time).getBytes())));
     }
 }

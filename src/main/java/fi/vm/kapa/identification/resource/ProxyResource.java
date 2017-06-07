@@ -39,7 +39,8 @@ public interface ProxyResource {
                                        @QueryParam("uid") String uid,
                                        @QueryParam("key") String key,
                                        @QueryParam("reqauthmethods") String authMethodReqStr,
-                                       @QueryParam("tag") String logTag)
+                                       @QueryParam("tag") String logTag,
+                                       @QueryParam("reqid") String authnRequestId)
             throws WebApplicationException;
 
     @GET

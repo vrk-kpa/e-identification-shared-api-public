@@ -26,34 +26,32 @@ import org.apache.commons.lang.StringUtils;
 
 
 public class TupasStampIdService {
-
     private static final int TUPAS_STAMP_LENGTH = 20;
-    
     private static TupasStampIdService instance = null;
-    
+
     private int tupasStampCounter;
-    
-    
+
     public static TupasStampIdService getInstance() {
         if (instance == null) {
             instance = new TupasStampIdService();
         }
-
         return instance;
     }
 
-    
     public String getTupasStampCounter(int lengthOfTimeStamp) {
         int len = TUPAS_STAMP_LENGTH - lengthOfTimeStamp;
+
+        String strTupasStampCounter = Long.toString(updateAndGetCounter());
+        String tupasStampStr = StringUtils.leftPad(strTupasStampCounter, len, "0");
+
+        return tupasStampStr;
+    }
+
+    private synchronized int updateAndGetCounter() {
         tupasStampCounter++;
-        
-        if (tupasStampCounter == 9999 ) {
+        if (tupasStampCounter == 9999) {
             tupasStampCounter = 1;
         }
-        
-        String strTupasStampCounter = Long.toString(tupasStampCounter);
-        String tupasStampStr = StringUtils.leftPad(strTupasStampCounter, len, "0");
-               
-        return tupasStampStr;
+        return tupasStampCounter;
     }
 }

@@ -80,4 +80,6 @@ public class TupasStampIdServiceTest {
         tupasStampCounter = stampIdService.getTupasStampCounter(20);
         assertEquals(1, Long.valueOf(tupasStampCounter).longValue());
     }
+
+
 }

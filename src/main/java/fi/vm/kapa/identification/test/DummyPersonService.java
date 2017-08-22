@@ -63,8 +63,7 @@ public class DummyPersonService implements PersonService {
         if (identifierType == HETU) {
             person.setHetu(identifier);
             person.setHetuValid(true);
-        }
-        else if (identifierType == SATU) {
+        } else if (identifierType == SATU) {
             person.setSatu(identifier);
             person.setSatuValid(true);
             String hetu = defaultHetu;

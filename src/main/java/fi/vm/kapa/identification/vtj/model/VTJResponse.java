@@ -24,9 +24,9 @@ package fi.vm.kapa.identification.vtj.model;
 
 public class VTJResponse {
     private Person person;
-    
+
     private boolean success;
-    
+
     private String error;
 
     public Person getPerson() {

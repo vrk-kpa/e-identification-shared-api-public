@@ -23,48 +23,53 @@
 package fi.vm.kapa.identification.dto;
 
 public class AuthenticationProviderDTO {
-    
+
     private String name; //db: name
     private String domainName; //db: dnsname
     private String authenticationMethod; //db: attr_loa, authentication method authenticationMethod: HST, TUPAS etc.
     private String authProviderAuthContextUrl; //db: acsAddress, auth context class/decl value (oid or url) used in end-IdP reply
     private String dbEntityIdAuthContextUrl; //db: entityid
-    
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public String getDomainName() {
         return domainName;
     }
+
     public void setDomainName(String domainName) {
         this.domainName = domainName;
     }
-    
+
     public String getAuthenticationMethod() {
         return authenticationMethod;
     }
+
     public void setAuthenticationMethod(String authenticationMethod) {
         this.authenticationMethod = authenticationMethod;
     }
-    
+
     public String getAuthProviderAuthContextUrl() {
         return authProviderAuthContextUrl;
     }
+
     public void setAuthProviderAuthContextUrl(String authProviderAuthContextUrl) {
         this.authProviderAuthContextUrl = authProviderAuthContextUrl;
     }
-    
+
     public String getDbEntityIdAuthContextUrl() {
         return dbEntityIdAuthContextUrl;
     }
+
     public void setDbEntityIdAuthContextUrl(String dbEntityIdAuthContextUrl) {
         this.dbEntityIdAuthContextUrl = dbEntityIdAuthContextUrl;
     }
-    
+
     //disco-id is user interface identifier that is formed from name
     public String getDiscoId() {
         return "disco-" + getName().toLowerCase();

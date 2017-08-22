@@ -33,35 +33,35 @@ public class Person {
     private String firstNames;
     private String nickName;
     private String emailAddress;
-    
+
     private String municipalityCode;
     private String municipalityS;
     private String municipalityR;
-    
+
     private String domesticAddressS;
     private String domesticAddressR;
     private String postalCode;
     private String cityS;
     private String cityR;
-    
+
     private String foreignAddress;
     private String foreignLocalityAndStateS;
     private String foreignLocalityAndStateR;
     private String foreignLocalityAndStateClearText;
     private String stateCode;
-    
+
     private String temporaryDomesticAddressS;
     private String temporaryDomesticAddressR;
     private String temporaryPostalCode;
     private String temporaryCityS;
-    private String temporaryCityR;    
-          
+    private String temporaryCityR;
+
     private String finnishCitizenship;
-    
+
     private boolean deceased;
     private boolean protectionOrder;
-    
-      
+
+
     public String getHetu() {
         return hetu;
     }
@@ -93,7 +93,7 @@ public class Person {
     public void setSatuValid(boolean satuValid) {
         this.satuValid = satuValid;
     }
-    
+
     public String getLastName() {
         return lastName;
     }
@@ -170,7 +170,7 @@ public class Person {
         return domesticAddressR;
     }
 
-   public void setDomesticAddressR(String domesticAddressR) {
+    public void setDomesticAddressR(String domesticAddressR) {
         this.domesticAddressR = domesticAddressR;
     }
 

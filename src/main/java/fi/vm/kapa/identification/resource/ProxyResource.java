@@ -27,7 +27,6 @@ import fi.vm.kapa.identification.dto.SessionAttributeDTO;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-
 import java.util.Map;
 
 public interface ProxyResource {
@@ -39,8 +38,7 @@ public interface ProxyResource {
                                        @QueryParam("uid") String uid,
                                        @QueryParam("key") String key,
                                        @QueryParam("reqauthmethods") String authMethodReqStr,
-                                       @QueryParam("tag") String logTag,
-                                       @QueryParam("reqid") String authnRequestId)
+                                       @QueryParam("tag") String logTag)
             throws WebApplicationException;
 
     @GET
@@ -64,7 +62,9 @@ public interface ProxyResource {
     @Produces(MediaType.APPLICATION_JSON + "; charset=UTF-8")
     SessionAttributeDTO getSessionAttributes(@QueryParam("uid") String uid,
                                              @QueryParam("authmethodoid") String authMethodOid,
-                                             @QueryParam("relyingparty") String relyingParty)
+                                             @QueryParam("relyingparty") String relyingParty,
+                                             @QueryParam("tokenRequired") boolean tokenRequired,
+                                             @QueryParam("authnRequestId") String authnRequestId)
             throws WebApplicationException;
 
     @POST
@@ -74,6 +74,6 @@ public interface ProxyResource {
     ProxyMessageDTO fromSPBuildSessionPost(@QueryParam("tid") String tokenId,
                                            @QueryParam("pid") String phaseId,
                                            @QueryParam("tag") String logTag,
-                                           Map<String, String> spSessionData)
+                                           Map<String,String> spSessionData)
             throws WebApplicationException;
 }

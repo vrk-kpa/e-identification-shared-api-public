@@ -22,8 +22,6 @@
  */
 package fi.vm.kapa.identification.dto;
 
-import java.util.Set;
-
 import fi.vm.kapa.identification.type.ErrorType;
 
 /**
@@ -45,7 +43,7 @@ public class ProxyMessageDTO {
     private ErrorType errorType;
 
     private String loaProfile;
-    
+
     private String authenticationMethods;
 
     private String usedAuthenticationMethod;
@@ -91,9 +89,11 @@ public class ProxyMessageDTO {
     public void setErrorType(ErrorType errorType) {
         this.errorType = errorType;
     }
+
     public String getLoaProfile() {
         return loaProfile;
     }
+
     public void setLoaProfile(String loaProfile) {
         this.loaProfile = loaProfile;
     }

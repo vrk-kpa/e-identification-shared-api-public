@@ -25,7 +25,7 @@ package fi.vm.kapa.identification.type;
 
 public enum SessionStatus {
 
-    INIT ("0");
+    INIT("0");
 
     private final String statusAsNumericalString;
 

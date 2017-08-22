@@ -27,13 +27,13 @@ import java.util.Map;
 
 public class SessionAttributeDTO {
 
-    private Map<String, String> attributeMap = new HashMap<>();
+    private Map<String,String> attributeMap = new HashMap<>();
 
     public void addAttribute(String key, String value) {
         this.attributeMap.put(key, value);
     }
 
-    public Map<String, String> getAttributeMap() {
+    public Map<String,String> getAttributeMap() {
         return this.attributeMap;
     }
 }

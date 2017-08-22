@@ -70,7 +70,7 @@ public class MetadataDTO {
     private MetadataContactInfoDTO technicalContact;
 
     private List<AuthenticationProviderDTO> authenticationProviderDTOList;
-    
+
     private boolean vtjVerificationRequired;
 
     public MetadataDTO() {

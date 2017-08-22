@@ -23,15 +23,15 @@
 package fi.vm.kapa.identification.type;
 
 public enum AuthMethod {
-    INIT ("0"),
-    TUPAS ("urn:oid:1.2.246.517.3002.110.1"),
-    HST ("urn:oid:1.2.246.517.3002.110.2"),
-    MOBIILI("urn:oid:1.2.246.517.3002.110.3") ,
-    KATSOOTP ("urn:oid:1.2.246.517.3002.110.5"),
-    KATSOPWD ("urn:oid:1.2.246.517.3002.110.6"),
-    MPASS1 ("urn:oid:1.2.246.517.3002.110.11"),
-    EIDAS1 ("urn:oid:1.2.246.517.3002.110.998"),
-    TESTI ("urn:oid:1.2.246.517.3002.110.999");
+    INIT("0"),
+    TUPAS("urn:oid:1.2.246.517.3002.110.1"),
+    HST("urn:oid:1.2.246.517.3002.110.2"),
+    MOBIILI("urn:oid:1.2.246.517.3002.110.3"),
+    KATSOOTP("urn:oid:1.2.246.517.3002.110.5"),
+    KATSOPWD("urn:oid:1.2.246.517.3002.110.6"),
+    MPASS1("urn:oid:1.2.246.517.3002.110.11"),
+    EIDAS1("urn:oid:1.2.246.517.3002.110.998"),
+    TESTI("urn:oid:1.2.246.517.3002.110.999");
 
     private final String oidValue;
 
@@ -49,7 +49,7 @@ public enum AuthMethod {
                 return authMethod;
             }
         }
-        throw new IllegalOidException("AuthMethod not found for oid: "+oid);
+        throw new IllegalOidException("AuthMethod not found for oid: " + oid);
     }
 
     public static class IllegalOidException extends Exception {

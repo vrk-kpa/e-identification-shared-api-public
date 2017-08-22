@@ -22,8 +22,8 @@
  */
 package fi.vm.kapa.identification.service;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class implements a generic singleton class that can be used to store

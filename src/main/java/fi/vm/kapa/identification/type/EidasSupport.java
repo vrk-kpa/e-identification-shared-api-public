@@ -20,36 +20,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 package fi.vm.kapa.identification.type;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
-public class AuthMethodTest {
-
-    @Test
-    public void fromOidReturnsfLoA2ForfLoA2Oid() throws Exception {
-        assertEquals(AuthMethod.fLoA2, AuthMethod.fromOid(AuthMethod.fLoA2.getOidValue()));
-    }
-
-    @Test
-    public void fromOidReturnsfLoA3ForfLoA3Oid() throws Exception {
-        assertEquals(AuthMethod.fLoA3, AuthMethod.fromOid(AuthMethod.fLoA3.getOidValue()));
-    }
-
-    @Test
-    public void fromOidReturnsKatsoOtpForKatsoOtpOid() throws Exception {
-        assertEquals(AuthMethod.KATSOOTP, AuthMethod.fromOid(AuthMethod.KATSOOTP.getOidValue()));
-    }
-
-    @Test
-    public void fromOidReturnsKatsoPwdForKatsoPwdOid() throws Exception {
-        assertEquals(AuthMethod.KATSOPWD, AuthMethod.fromOid(AuthMethod.KATSOPWD.getOidValue()));
-    }
-
-    @Test(expected = AuthMethod.IllegalOidException.class)
-    public void fromOidThrowsForUnknownOid() throws Exception {
-        AuthMethod.fromOid("urn:oid:1.2.3.4");
-    }
+public enum EidasSupport {
+    full,
+    form,
+    none
 }

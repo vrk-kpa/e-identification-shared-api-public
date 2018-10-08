@@ -23,17 +23,19 @@
 package fi.vm.kapa.identification.type;
 
 public enum AuthMethod {
-    INIT("0"),
-    TUPAS("urn:oid:1.2.246.517.3002.110.1"),
-    HST("urn:oid:1.2.246.517.3002.110.2"),
-    MOBIILI("urn:oid:1.2.246.517.3002.110.3"),
-    KATSOOTP("urn:oid:1.2.246.517.3002.110.5"),
-    KATSOPWD("urn:oid:1.2.246.517.3002.110.6"),
-    MPASS1("urn:oid:1.2.246.517.3002.110.11"),
-    EIDAS1("urn:oid:1.2.246.517.3002.110.998"),
-    EIDAS_LOA2("urn:oid:1.2.246.517.3002.110.997"),
-    EIDAS_LOA3("urn:oid:1.2.246.517.3002.110.996"),
-    TESTI("urn:oid:1.2.246.517.3002.110.999");
+    INIT ("0"),
+    KATSOOTP ("urn:oid:1.2.246.517.3002.110.5"),
+    KATSOPWD ("urn:oid:1.2.246.517.3002.110.6"),
+    MPASS1 ("urn:oid:1.2.246.517.3002.110.11"),
+    EIDAS1 ("urn:oid:1.2.246.517.3002.110.998"),
+    EIDAS_LOA2 ("urn:oid:1.2.246.517.3002.110.997"),
+    EIDAS_LOA3 ("urn:oid:1.2.246.517.3002.110.996"),
+    TESTI ("urn:oid:1.2.246.517.3002.110.999"),
+    TESTIDP("urn:oid:1.2.246.517.3002.110.995"),
+    fLoA2 ("http://ftn.ficora.fi/2017/loa2"),
+    fLoA3 ("http://ftn.ficora.fi/2017/loa3"),
+    eLoA2 ("http://eidas.europa.eu/LoA/substantial"),
+    eLoA3 ("http://eidas.europa.eu/LoA/high");
 
     private final String oidValue;
 

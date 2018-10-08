@@ -26,6 +26,7 @@ public class AuthenticationProviderDTO {
 
     private String name; //db: name
     private String domainName; //db: dnsname
+    private String loa; // db: loa
     private String authenticationMethod; //db: attr_loa, authentication method authenticationMethod: HST, TUPAS etc.
     private String authProviderAuthContextUrl; //db: acsAddress, auth context class/decl value (oid or url) used in end-IdP reply
     private String dbEntityIdAuthContextUrl; //db: entityid
@@ -45,6 +46,9 @@ public class AuthenticationProviderDTO {
     public void setDomainName(String domainName) {
         this.domainName = domainName;
     }
+
+    public String getLoa() { return loa; }
+    public void setLoa(String loa) { this.loa = loa; }
 
     public String getAuthenticationMethod() {
         return authenticationMethod;

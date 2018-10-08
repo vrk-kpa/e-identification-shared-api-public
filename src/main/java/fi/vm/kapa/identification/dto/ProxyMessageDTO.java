@@ -22,6 +22,7 @@
  */
 package fi.vm.kapa.identification.dto;
 
+import fi.vm.kapa.identification.type.AuthMethod;
 import fi.vm.kapa.identification.type.ErrorType;
 
 /**
@@ -42,11 +43,17 @@ public class ProxyMessageDTO {
 
     private ErrorType errorType;
 
-    private String loaProfile;
+    private String levelOfAssurance;
 
-    private String authenticationMethods;
+    private String requestedAuthenticationMethods;
 
-    private String usedAuthenticationMethod;
+    private AuthMethod[] sessionAuthenticationMethods;
+
+    private String eidasContactAddress;
+
+    private String entityId;
+
+    private String displayNameFI;
 
     // Setters and getters
 
@@ -90,27 +97,51 @@ public class ProxyMessageDTO {
         this.errorType = errorType;
     }
 
-    public String getLoaProfile() {
-        return loaProfile;
+    public String getLevelOfAssurance() {
+        return levelOfAssurance;
     }
 
-    public void setLoaProfile(String loaProfile) {
-        this.loaProfile = loaProfile;
+    public void setLevelOfAssurance(String levelOfAssurance) {
+        this.levelOfAssurance = levelOfAssurance;
     }
 
-    public String getAuthenticationMethods() {
-        return authenticationMethods;
+    public String getRequestedAuthenticationMethods() {
+        return requestedAuthenticationMethods;
     }
 
-    public void setAuthenticationMethods(String authenticationMethods) {
-        this.authenticationMethods = authenticationMethods;
+    public void setRequestedAuthenticationMethods(String requestedAuthenticationMethods) {
+        this.requestedAuthenticationMethods = requestedAuthenticationMethods;
     }
 
-    public String getUsedAuthenticationMethod() {
-        return usedAuthenticationMethod;
+    public AuthMethod[] getSessionAuthenticationMethods() {
+        return sessionAuthenticationMethods;
     }
 
-    public void setUsedAuthenticationMethod(String usedAuthenticationMethod) {
-        this.usedAuthenticationMethod = usedAuthenticationMethod;
+    public void setSessionAuthenticationMethods(AuthMethod[] sessionAuthenticationMethods) {
+        this.sessionAuthenticationMethods = sessionAuthenticationMethods;
+    }
+
+    public String getEidasContactAddress() {
+        return eidasContactAddress;
+    }
+
+    public void setEidasContactAddress(String eidasContactAddress) {
+        this.eidasContactAddress = eidasContactAddress;
+    }
+
+    public String getEntityId() {
+        return entityId;
+    }
+
+    public void setEntityId(String entityId) {
+        this.entityId = entityId;
+    }
+
+    public String getDisplayNameFI() {
+        return displayNameFI;
+    }
+
+    public void setDisplayNameFI(String displayNameFI) {
+        this.displayNameFI = displayNameFI;
     }
 }

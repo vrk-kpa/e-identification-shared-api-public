@@ -30,8 +30,6 @@ public class Identifier {
         HETU,
         SATU,
         KID,
-        EPPN,
-        UID,
         EIDAS_ID
     }
 }

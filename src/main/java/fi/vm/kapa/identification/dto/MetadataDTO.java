@@ -22,6 +22,7 @@
  */
 package fi.vm.kapa.identification.dto;
 
+import fi.vm.kapa.identification.type.EidasSupport;
 import fi.vm.kapa.identification.type.ProviderType;
 import fi.vm.kapa.identification.type.SessionProfile;
 
@@ -73,8 +74,13 @@ public class MetadataDTO {
 
     private boolean vtjVerificationRequired;
 
+    private String eidasContactAddress;
+
+    private EidasSupport eidasSupport;
+
     public MetadataDTO() {
         vtjVerificationRequired = true;
+        eidasSupport = EidasSupport.full;
     }
 
     // Getters and setters
@@ -237,5 +243,21 @@ public class MetadataDTO {
 
     public void setVtjVerificationRequired(boolean vtjVerificationRequired) {
         this.vtjVerificationRequired = vtjVerificationRequired;
+    }
+
+    public String getEidasContactAddress() {
+        return eidasContactAddress;
+    }
+
+    public void setEidasContactAddress(String eidasContactAddress) {
+        this.eidasContactAddress = eidasContactAddress;
+    }
+
+    public EidasSupport getEidasSupport() {
+        return eidasSupport;
+    }
+
+    public void setEidasSupport(EidasSupport eidasSupport) {
+        this.eidasSupport = eidasSupport;
     }
 }

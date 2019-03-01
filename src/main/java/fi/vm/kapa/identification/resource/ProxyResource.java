@@ -35,6 +35,8 @@ public interface ProxyResource {
     @Path("/idp/init")
     @Produces(MediaType.APPLICATION_JSON + "; charset=UTF-8")
     ProxyMessageDTO fromIdPInitSession(@QueryParam("r") String relyingParty,
+                                       @QueryParam("entityId") String entityId,
+                                       @QueryParam("countryCode") String countryCode,
                                        @QueryParam("uid") String uid,
                                        @QueryParam("key") String key,
                                        @QueryParam("reqauthmethods") String authMethodReqStr,

@@ -30,7 +30,7 @@ public class CountryDTO {
 
     private MultiLanguageDTO displayName;
 
-    private String levelOfAssurance;
+    private String authProviderEntityId;
 
     private String eidasLoginContext;
 
@@ -62,12 +62,12 @@ public class CountryDTO {
         this.displayName = displayName;
     }
 
-    public String getLevelOfAssurance() {
-        return levelOfAssurance;
+    public String getAuthProviderEntityId() {
+        return authProviderEntityId;
     }
 
-    public void setLevelOfAssurance(String levelOfAssurance) {
-        this.levelOfAssurance = levelOfAssurance;
+    public void setAuthProviderEntityId(String authProviderEntityId) {
+        this.authProviderEntityId = authProviderEntityId;
     }
 
     public String getEidasLoginContext() {

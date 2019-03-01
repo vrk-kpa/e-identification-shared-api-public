@@ -45,8 +45,6 @@ public class ProxyMessageDTO {
 
     private String levelOfAssurance;
 
-    private String requestedAuthenticationMethods;
-
     private AuthMethod[] sessionAuthenticationMethods;
 
     private String eidasContactAddress;
@@ -54,6 +52,8 @@ public class ProxyMessageDTO {
     private String entityId;
 
     private String displayNameFI;
+
+    private String loginContext;
 
     // Setters and getters
 
@@ -105,14 +105,6 @@ public class ProxyMessageDTO {
         this.levelOfAssurance = levelOfAssurance;
     }
 
-    public String getRequestedAuthenticationMethods() {
-        return requestedAuthenticationMethods;
-    }
-
-    public void setRequestedAuthenticationMethods(String requestedAuthenticationMethods) {
-        this.requestedAuthenticationMethods = requestedAuthenticationMethods;
-    }
-
     public AuthMethod[] getSessionAuthenticationMethods() {
         return sessionAuthenticationMethods;
     }
@@ -143,5 +135,13 @@ public class ProxyMessageDTO {
 
     public void setDisplayNameFI(String displayNameFI) {
         this.displayNameFI = displayNameFI;
+    }
+
+    public String getLoginContext() {
+        return loginContext;
+    }
+
+    public void setLoginContext(String loginContext) {
+        this.loginContext = loginContext;
     }
 }

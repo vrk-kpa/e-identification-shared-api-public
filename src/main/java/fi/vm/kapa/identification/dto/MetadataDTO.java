@@ -78,6 +78,8 @@ public class MetadataDTO {
 
     private EidasSupport eidasSupport;
 
+    private String loginContext;
+
     public MetadataDTO() {
         vtjVerificationRequired = true;
         eidasSupport = EidasSupport.full;
@@ -259,5 +261,13 @@ public class MetadataDTO {
 
     public void setEidasSupport(EidasSupport eidasSupport) {
         this.eidasSupport = eidasSupport;
+    }
+
+    public String getLoginContext() {
+        return loginContext;
+    }
+
+    public void setLoginContext(String loginContext) {
+        this.loginContext = loginContext;
     }
 }

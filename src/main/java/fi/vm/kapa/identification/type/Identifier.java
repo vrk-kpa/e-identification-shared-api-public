@@ -30,6 +30,7 @@ public class Identifier {
         HETU,
         SATU,
         KID,
+        FPID, // foreign person identifier
         EIDAS_ID
     }
 }

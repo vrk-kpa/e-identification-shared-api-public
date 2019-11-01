@@ -35,7 +35,8 @@ public enum AuthMethod {
     fLoA2 ("http://ftn.ficora.fi/2017/loa2"),
     fLoA3 ("http://ftn.ficora.fi/2017/loa3"),
     eLoA2 ("http://eidas.europa.eu/LoA/substantial"),
-    eLoA3 ("http://eidas.europa.eu/LoA/high");
+    eLoA3 ("http://eidas.europa.eu/LoA/high"),
+    FFI ("urn:oid:1.2.246.517.3002.110.7"); // finnish foreign identity
 
     private final String oidValue;
 
